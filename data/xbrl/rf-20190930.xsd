@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!--XBRL Document Created with Wdesk from Workiva-->
+<!-- -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.regions.com/20190930" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:rf="http://www.regions.com/20190930" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://fasb.org/srt/2018-01-31" schemaLocation="http://xbrl.fasb.org/srt/2018/elts/srt-2018-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-gaap/2018-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2018/elts/us-gaap-2018-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-roles/2018-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2018/elts/us-roles-2018-01-31.xsd" />
+  <xsd:import namespace="http://fasb.org/us-types/2018-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2018/elts/us-types-2018-01-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/arcrole/fact-explanatoryFact" schemaLocation="http://www.xbrl.org/lrr/arcrole/factExplanatory-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/negated" schemaLocation="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/2009/role/net" schemaLocation="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+  <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/country/2017-01-31" schemaLocation="http://xbrl.sec.gov/country/2017/country-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/currency/2017-01-31" schemaLocation="http://xbrl.sec.gov/currency/2017/currency-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/dei/2019-01-31" schemaLocation="https://xbrl.sec.gov/dei/2019/dei-2019-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/exch/2018-01-31" schemaLocation="https://xbrl.sec.gov/exch/2018/exch-2018-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/invest/2013-01-31" schemaLocation="http://xbrl.sec.gov/invest/2013/invest-2013-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/naics/2017-01-31" schemaLocation="http://xbrl.sec.gov/naics/2017/naics-2017-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/sic/2011-01-31" schemaLocation="http://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd" />
+  <xsd:import namespace="http://xbrl.sec.gov/stpr/2018-01-31" schemaLocation="https://xbrl.sec.gov/stpr/2018/stpr-2018-01-31.xsd" />
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="rf-20190930_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="rf-20190930_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="rf-20190930_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:type="simple" />
+      <link:linkbaseRef xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="rf-20190930_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:type="simple" />
+      <link:roleType id="BasisOfPresentation" roleURI="http://www.regions.com/role/BasisOfPresentation">
+        <link:definition>2101100 - Disclosure - Basis of Presentation</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformation" roleURI="http://www.regions.com/role/BusinessSegmentInformation">
+        <link:definition>2113100 - Disclosure - Business Segment Information</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationScheduleOfFinancialInformationByReportableSegmentDetails" roleURI="http://www.regions.com/role/BusinessSegmentInformationScheduleOfFinancialInformationByReportableSegmentDetails">
+        <link:definition>2413402 - Disclosure - Business Segment Information (Schedule Of Financial Information By Reportable Segment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="BusinessSegmentInformationTables" roleURI="http://www.regions.com/role/BusinessSegmentInformationTables">
+        <link:definition>2313301 - Disclosure - Business Segment Information (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsContingenciesAndGuarantees" roleURI="http://www.regions.com/role/CommitmentsContingenciesAndGuarantees">
+        <link:definition>2114100 - Disclosure - Commitments, Contingencies and Guarantees</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsContingenciesAndGuaranteesCreditRiskOfOffBalanceSheetFinancialInstrumentsByContractualAmountsDetails" roleURI="http://www.regions.com/role/CommitmentsContingenciesAndGuaranteesCreditRiskOfOffBalanceSheetFinancialInstrumentsByContractualAmountsDetails">
+        <link:definition>2414402 - Disclosure - Commitments, Contingencies and Guarantees (Credit Risk Of Off-Balance Sheet Financial Instruments By Contractual Amounts) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsContingenciesAndGuaranteesNarrativeDetails" roleURI="http://www.regions.com/role/CommitmentsContingenciesAndGuaranteesNarrativeDetails">
+        <link:definition>2414403 - Disclosure - Commitments, Contingencies and Guarantees (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="CommitmentsContingenciesAndGuaranteesTables" roleURI="http://www.regions.com/role/CommitmentsContingenciesAndGuaranteesTables">
+        <link:definition>2314301 - Disclosure - Commitments, Contingencies and Guarantees (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheets" roleURI="http://www.regions.com/role/ConsolidatedBalanceSheets">
+        <link:definition>1002000 - Statement - CONSOLIDATED BALANCE SHEETS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedBalanceSheetsParenthetical" roleURI="http://www.regions.com/role/ConsolidatedBalanceSheetsParenthetical">
+        <link:definition>1002501 - Statement - CONSOLIDATED BALANCE SHEETS (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfCashFlows" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfCashFlows">
+        <link:definition>1009000 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfChangesInStockholdersEquity" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfChangesInStockholdersEquity">
+        <link:definition>1008000 - Statement - CONSOLIDATED STATEMENTS OF CHANGES IN STOCKHOLDERS' EQUITY</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncome" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfComprehensiveIncome">
+        <link:definition>1006000 - Statement - CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfComprehensiveIncomeParenthetical" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfComprehensiveIncomeParenthetical">
+        <link:definition>1006501 - Statement - CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Parenthetical)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfIncome" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfIncome">
+        <link:definition>1003000 - Statement - CONSOLIDATED STATEMENTS OF INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ConsolidatedStatementsOfIncomeCalc2" roleURI="http://www.regions.com/role/ConsolidatedStatementsOfIncomeCalc2">
+        <link:definition>1003000 - Statement - CONSOLIDATED STATEMENTS OF INCOME</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivities" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivities">
+        <link:definition>2111100 - Disclosure - Derivative Financial Instruments and Hedging Activities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesNarrativeDetails" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesNarrativeDetails">
+        <link:definition>2411406 - Disclosure - Derivative Financial Instruments And Hedging Activities (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfDerivativeInstrumentsNotionalAndFairValueDetails" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfDerivativeInstrumentsNotionalAndFairValueDetails">
+        <link:definition>2411402 - Disclosure - Derivative Financial Instruments and Hedging Activities (Schedule of Derivative Instruments Notional and Fair Value) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfEffectOfDerivativeInstrumentsOnStatementsOfOperationsDetails" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfEffectOfDerivativeInstrumentsOnStatementsOfOperationsDetails">
+        <link:definition>2411403 - Disclosure - Derivative Financial Instruments And Hedging Activities (Schedule Of The Effect Of Derivative Instruments On The Statements Of Operations) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfFairValueHedgingBasisAdjustmentsDetails" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfFairValueHedgingBasisAdjustmentsDetails">
+        <link:definition>2411404 - Disclosure - Derivative Financial Instruments and Hedging Activities (Schedule of Fair Value Hedging Basis Adjustments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfGainsLossesRecognizedRelatedToDerivativesNotDesignatedAsHedgingInstrumentsDetails" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesScheduleOfGainsLossesRecognizedRelatedToDerivativesNotDesignatedAsHedgingInstrumentsDetails">
+        <link:definition>2411405 - Disclosure - Derivative Financial Instruments and Hedging Activities (Schedule of Gains (Losses) Recognized Related to Derivatives Not Designated as Hedging Instruments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DerivativeFinancialInstrumentsAndHedgingActivitiesTables" roleURI="http://www.regions.com/role/DerivativeFinancialInstrumentsAndHedgingActivitiesTables">
+        <link:definition>2311301 - Disclosure - Derivative Financial Instruments and Hedging Activities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="DocumentAndEntityInformation" roleURI="http://www.regions.com/role/DocumentAndEntityInformation">
+        <link:definition>0001000 - Document - DOCUMENT AND ENTITY INFORMATION</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsLossPerCommonShare" roleURI="http://www.regions.com/role/EarningsLossPerCommonShare">
+        <link:definition>2109100 - Disclosure - Earnings (Loss) Per Common Share</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsLossPerCommonShareComputationOfBasicAndDilutedEarningsLossPerCommonShareDetails" roleURI="http://www.regions.com/role/EarningsLossPerCommonShareComputationOfBasicAndDilutedEarningsLossPerCommonShareDetails">
+        <link:definition>2409402 - Disclosure - Earnings (Loss) Per Common Share (Computation Of Basic And Diluted Earnings (Loss) Per Common Share) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="EarningsLossPerCommonShareTables" roleURI="http://www.regions.com/role/EarningsLossPerCommonShareTables">
+        <link:definition>2309301 - Disclosure - Earnings (Loss) Per Common Share (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurements" roleURI="http://www.regions.com/role/FairValueMeasurements">
+        <link:definition>2112100 - Disclosure - Fair Value Measurements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsFairValueOptionFairValueAndUnpaidPrincipalBalanceDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsFairValueOptionFairValueAndUnpaidPrincipalBalanceDetails">
+        <link:definition>2412406 - Disclosure - Fair Value Measurements (Fair Value Option, Fair Value and Unpaid Principal Balance) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsRollforwardForAssetsAndLiabilitiesMeasuredAtFairValueOnRecurringBasisWithLevel3SignificantUnobservableInputsDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsRollforwardForAssetsAndLiabilitiesMeasuredAtFairValueOnRecurringBasisWithLevel3SignificantUnobservableInputsDetails">
+        <link:definition>2412403 - Disclosure - Fair Value Measurements (Rollforward For Assets And Liabilities Measured At Fair Value On A Recurring Basis With Level 3 Significant Unobservable Inputs) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsScheduleOfAssetsAndLiabilitiesAtFairValueMeasuredOnRecurringBasisAndNonRecurringBasisDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsScheduleOfAssetsAndLiabilitiesAtFairValueMeasuredOnRecurringBasisAndNonRecurringBasisDetails">
+        <link:definition>2412402 - Disclosure - Fair Value Measurements (Schedule Of Assets And Liabilities At Fair Value Measured On A Recurring Basis And Non-Recurring Basis) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsScheduleOfCarryingAmountsAndEstimatedFairValuesOfFinancialInstrumentsDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsScheduleOfCarryingAmountsAndEstimatedFairValuesOfFinancialInstrumentsDetails">
+        <link:definition>2412407 - Disclosure - Fair Value Measurements (Schedule Of Carrying Amounts And Estimated Fair Values Of Financial Instruments) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsScheduleOfFairValueAdjustmentsRelatedToNonRecurringFairValueMeasurementsDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsScheduleOfFairValueAdjustmentsRelatedToNonRecurringFairValueMeasurementsDetails">
+        <link:definition>2412404 - Disclosure - Fair Value Measurements (Schedule Of Fair Value Adjustments Related To Non-Recurring Fair Value Measurements) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsSummaryOfQuantitativeInformationAboutLevel3FairValueMeasurementsDetails" roleURI="http://www.regions.com/role/FairValueMeasurementsSummaryOfQuantitativeInformationAboutLevel3FairValueMeasurementsDetails">
+        <link:definition>2412405 - Disclosure - Fair Value Measurements (Summary Of Quantitative Information About Level 3 Fair Value Measurements) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="FairValueMeasurementsTables" roleURI="http://www.regions.com/role/FairValueMeasurementsTables">
+        <link:definition>2312301 - Disclosure - Fair Value Measurements (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Leases" roleURI="http://www.regions.com/role/Leases">
+        <link:definition>2106100 - Disclosure - Leases</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLesseeInformationRelatedToOperatingLeasesDetails" roleURI="http://www.regions.com/role/LeasesLesseeInformationRelatedToOperatingLeasesDetails">
+        <link:definition>2406403 - Disclosure - Leases (Lessee: Information related to Operating Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLesseeScheduleOfFutureUndiscountedMinimumLeasePaymentsOnOperatingLeasesDetails" roleURI="http://www.regions.com/role/LeasesLesseeScheduleOfFutureUndiscountedMinimumLeasePaymentsOnOperatingLeasesDetails">
+        <link:definition>2406404 - Disclosure - Leases (Lessee: Schedule of Future, Undiscounted Minimum Lease Payments on Operating Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLesseeScheduleOfFutureUndiscountedMinimumLeasePaymentsOnOperatingLeasesDetailsCalc2" roleURI="http://www.regions.com/role/LeasesLesseeScheduleOfFutureUndiscountedMinimumLeasePaymentsOnOperatingLeasesDetailsCalc2">
+        <link:definition>2406404 - Disclosure - Leases (Lessee: Schedule of Future, Undiscounted Minimum Lease Payments on Operating Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLessorScheduleOfMinimumFuturePaymentsDueFromCustomersForSalesTypeDirectFinancingAndOperatingLeasesDetails" roleURI="http://www.regions.com/role/LeasesLessorScheduleOfMinimumFuturePaymentsDueFromCustomersForSalesTypeDirectFinancingAndOperatingLeasesDetails">
+        <link:definition>2406406 - Disclosure - Leases (Lessor: Schedule of Minimum Future Payments Due From Customers for Sales-Type, Direct Financing, and Operating Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLessorScheduleOfMinimumFuturePaymentsDueFromCustomersForSalesTypeDirectFinancingAndOperatingLeasesDetailsCalc2" roleURI="http://www.regions.com/role/LeasesLessorScheduleOfMinimumFuturePaymentsDueFromCustomersForSalesTypeDirectFinancingAndOperatingLeasesDetailsCalc2">
+        <link:definition>2406406 - Disclosure - Leases (Lessor: Schedule of Minimum Future Payments Due From Customers for Sales-Type, Direct Financing, and Operating Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLessorSummaryOfSalesTypeDirectFinancingOperatingAndLeveragedLeasesDetails" roleURI="http://www.regions.com/role/LeasesLessorSummaryOfSalesTypeDirectFinancingOperatingAndLeveragedLeasesDetails">
+        <link:definition>2406405 - Disclosure - Leases (Lessor: Summary of Sales-Type, Direct Financing, Operating and Leveraged Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesLessorSummaryOfSalesTypeDirectFinancingOperatingAndLeveragedLeasesDetailsCalc2" roleURI="http://www.regions.com/role/LeasesLessorSummaryOfSalesTypeDirectFinancingOperatingAndLeveragedLeasesDetailsCalc2">
+        <link:definition>2406405 - Disclosure - Leases (Lessor: Summary of Sales-Type, Direct Financing, Operating and Leveraged Leases) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesNarrativeDetails" roleURI="http://www.regions.com/role/LeasesNarrativeDetails">
+        <link:definition>2406402 - Disclosure - Leases (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LeasesTables" roleURI="http://www.regions.com/role/LeasesTables">
+        <link:definition>2306301 - Disclosure - Leases (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLosses" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLosses">
+        <link:definition>2104100 - Disclosure - Loans and the Allowance for Credit Losses</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesAnalysisOfAllowanceForCreditLossesByPortfolioSegmentDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesAnalysisOfAllowanceForCreditLossesByPortfolioSegmentDetails">
+        <link:definition>2404403 - Disclosure - Loans and the Allowance for Credit Losses (Analysis of the Allowance for Credit Losses by Portfolio Segment) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesCreditQualityIndicatorsDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesCreditQualityIndicatorsDetails">
+        <link:definition>2404404 - Disclosure - Loans and the Allowance for Credit Losses (Credit Quality Indicators) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesImpairedFinancingReceivablesDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesImpairedFinancingReceivablesDetails">
+        <link:definition>2404406 - Disclosure - Loans and the Allowance for Credit Losses (Impaired Financing Receivables) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesLoansByClassModifiedInTdrDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesLoansByClassModifiedInTdrDetails">
+        <link:definition>2404407 - Disclosure - Loans and the Allowance for Credit Losses (Loans By Class Modified In TDR) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesLoansModifiedInPastTwelveMonthsWhichSubsequentlyDefaultedDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesLoansModifiedInPastTwelveMonthsWhichSubsequentlyDefaultedDetails">
+        <link:definition>2404408 - Disclosure - Loans and the Allowance for Credit Losses (Loans Modified In Past Twelve Months Which Subsequently Defaulted) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesNarrativeDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesNarrativeDetails">
+        <link:definition>2404409 - Disclosure - Loans and the Allowance for Credit Losses (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesScheduleOfAgingAnalysisOfDaysPastDueDpdForEachPortfolioClassDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesScheduleOfAgingAnalysisOfDaysPastDueDpdForEachPortfolioClassDetails">
+        <link:definition>2404405 - Disclosure - Loans and the Allowance for Credit Losses (Schedule of Aging Analysis Of Days Past Due (DPD) For Each Portfolio Class) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesScheduleOfLoanPortfolioNetOfUnearnedIncomeDetails" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesScheduleOfLoanPortfolioNetOfUnearnedIncomeDetails">
+        <link:definition>2404402 - Disclosure - Loans and the Allowance for Credit Losses (Schedule Of Loan Portfolio, Net Of Unearned Income) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="LoansAndAllowanceForCreditLossesTables" roleURI="http://www.regions.com/role/LoansAndAllowanceForCreditLossesTables">
+        <link:definition>2304301 - Disclosure - Loans and the Allowance for Credit Losses (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefits" roleURI="http://www.regions.com/role/PensionAndOtherPostretirementBenefits">
+        <link:definition>2110100 - Disclosure - Pension and Other Postretirement Benefits</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefitsScheduleOfNetPeriodicPensionCostDetails" roleURI="http://www.regions.com/role/PensionAndOtherPostretirementBenefitsScheduleOfNetPeriodicPensionCostDetails">
+        <link:definition>2410402 - Disclosure - Pension and Other Postretirement Benefits (Schedule of Net Periodic Pension Cost) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PensionAndOtherPostretirementBenefitsTables" roleURI="http://www.regions.com/role/PensionAndOtherPostretirementBenefitsTables">
+        <link:definition>2310301 - Disclosure - Pension and Other Postretirement Benefits (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="PreferredStockIssuancesDetails" roleURI="http://www.regions.com/role/PreferredStockIssuancesDetails">
+        <link:definition>2408402 - Disclosure - Preferred Stock Issuances (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RecentAccountingPronouncements" roleURI="http://www.regions.com/role/RecentAccountingPronouncements">
+        <link:definition>2116100 - Disclosure - Recent Accounting Pronouncements</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RecentAccountingPronouncementsNarrativeDetails" roleURI="http://www.regions.com/role/RecentAccountingPronouncementsNarrativeDetails">
+        <link:definition>2416401 - Disclosure - Recent Accounting Pronouncements (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ReclassificationFromAccumulatedOtherComprehensiveIncomeDetails" roleURI="http://www.regions.com/role/ReclassificationFromAccumulatedOtherComprehensiveIncomeDetails">
+        <link:definition>2408404 - Disclosure - Reclassification from Accumulated Other Comprehensive Income (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueRecognition" roleURI="http://www.regions.com/role/RevenueRecognition">
+        <link:definition>2115100 - Disclosure - Revenue Recognition</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueRecognitionNonInterestIncomeDisaggregatedByMajorProductCategoryDetails" roleURI="http://www.regions.com/role/RevenueRecognitionNonInterestIncomeDisaggregatedByMajorProductCategoryDetails">
+        <link:definition>2415402 - Disclosure - Revenue Recognition (Non-Interest Income Disaggregated by Major Product Category) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="RevenueRecognitionTables" roleURI="http://www.regions.com/role/RevenueRecognitionTables">
+        <link:definition>2315301 - Disclosure - Revenue Recognition (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ScheduleOfAccumulatedOtherComprehensiveIncomeDetails" roleURI="http://www.regions.com/role/ScheduleOfAccumulatedOtherComprehensiveIncomeDetails">
+        <link:definition>2408403 - Disclosure - Schedule of Accumulated Other Comprehensive Income (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="Securities" roleURI="http://www.regions.com/role/Securities">
+        <link:definition>2103100 - Disclosure - Securities</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesNarrativeDetails" roleURI="http://www.regions.com/role/SecuritiesNarrativeDetails">
+        <link:definition>2403406 - Disclosure - Securities (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesScheduleOfAmortizedCostGrossUnrealizedGainsAndLossesAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityDetails" roleURI="http://www.regions.com/role/SecuritiesScheduleOfAmortizedCostGrossUnrealizedGainsAndLossesAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityDetails">
+        <link:definition>2403402 - Disclosure - Securities (Schedule Of Amortized Cost, Gross Unrealized Gains And Losses, And Estimated Fair Value Of Securities Available For Sale And Securities Held To Maturity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesScheduleOfCostAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityByContractualMaturityDetails" roleURI="http://www.regions.com/role/SecuritiesScheduleOfCostAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityByContractualMaturityDetails">
+        <link:definition>2403403 - Disclosure - Securities (Schedule Of Cost And Estimated Fair Value Of Securities Available For Sale And Securities Held To Maturity By Contractual Maturity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesScheduleOfGrossRealizedGainsAndGrossRealizedLossesOnAvailableForSaleSecuritiesDetails" roleURI="http://www.regions.com/role/SecuritiesScheduleOfGrossRealizedGainsAndGrossRealizedLossesOnAvailableForSaleSecuritiesDetails">
+        <link:definition>2403405 - Disclosure - Securities (Schedule Of Gross Realized Gains And Gross Realized Losses On Available For Sale Securities) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesScheduleOfGrossUnrealizedLossesAndEstimatedFairValueOfSecuritiesAvailableForSaleAndHeldToMaturityDetails" roleURI="http://www.regions.com/role/SecuritiesScheduleOfGrossUnrealizedLossesAndEstimatedFairValueOfSecuritiesAvailableForSaleAndHeldToMaturityDetails">
+        <link:definition>2403404 - Disclosure - Securities (Schedule Of Gross Unrealized Losses And Estimated Fair Value Of Securities Available For Sale and Held to Maturity) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="SecuritiesTables" roleURI="http://www.regions.com/role/SecuritiesTables">
+        <link:definition>2303301 - Disclosure - Securities (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssets" roleURI="http://www.regions.com/role/ServicingOfFinancialAssets">
+        <link:definition>2105100 - Disclosure - Servicing of Financial Assets</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssetsAnalysisOfResidentialMortgageServicingRightsUnderFairValueMeasurementMethodDetails" roleURI="http://www.regions.com/role/ServicingOfFinancialAssetsAnalysisOfResidentialMortgageServicingRightsUnderFairValueMeasurementMethodDetails">
+        <link:definition>2405402 - Disclosure - Servicing of Financial Assets (Analysis Of Residential Mortgage Servicing Rights Under The Fair Value Measurement Method) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssetsDataAndAssumptionsUsedInFairValueCalculationAsWellAsValuationsSensitivityToRateFluctuationsRelatedToResidentialMortgageServicingRightsDetails" roleURI="http://www.regions.com/role/ServicingOfFinancialAssetsDataAndAssumptionsUsedInFairValueCalculationAsWellAsValuationsSensitivityToRateFluctuationsRelatedToResidentialMortgageServicingRightsDetails">
+        <link:definition>2405403 - Disclosure - Servicing of Financial Assets (Data And Assumptions Used In The Fair Value Calculation As Well As The Valuation's Sensitivity To Rate Fluctuations Related To Residential Mortgage Servicing Rights) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssetsNarrativeDetails" roleURI="http://www.regions.com/role/ServicingOfFinancialAssetsNarrativeDetails">
+        <link:definition>2405405 - Disclosure - Servicing of Financial Assets (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssetsScheduleOfFeesResultingFromServicingOfMortgageLoansDetails" roleURI="http://www.regions.com/role/ServicingOfFinancialAssetsScheduleOfFeesResultingFromServicingOfMortgageLoansDetails">
+        <link:definition>2405404 - Disclosure - Servicing of Financial Assets (Schedule Of Fees Resulting From The Servicing Of Mortgage Loans) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ServicingOfFinancialAssetsTables" roleURI="http://www.regions.com/role/ServicingOfFinancialAssetsTables">
+        <link:definition>2305301 - Disclosure - Servicing of Financial Assets (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLoss" roleURI="http://www.regions.com/role/StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLoss">
+        <link:definition>2108100 - Disclosure - Stockholders' Equity and Accumulated Other Comprehensive Income (Loss)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLossNarrativeDetails" roleURI="http://www.regions.com/role/StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLossNarrativeDetails">
+        <link:definition>2408405 - Disclosure - Stockholders' Equity And Accumulated Other Comprehensive Income (Loss) (Narrative) (Details)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLossTables" roleURI="http://www.regions.com/role/StockholdersEquityAndAccumulatedOtherComprehensiveIncomeLossTables">
+        <link:definition>2308301 - Disclosure - Stockholders' Equity and Accumulated Other Comprehensive Income (Loss) (Tables)</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:element abstract="true" id="rf_AccrualMember" name="AccrualMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_AccumulatedNetUnrealizedLossonHeldToMaturitySecuritiesMember" name="AccumulatedNetUnrealizedLossonHeldToMaturitySecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_AllOtherSecuritiesMember" name="AllOtherSecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_AmortizationofUnrealizedLossesonSecuritiesTransferredtoHeldtoMaturityNetofTax" name="AmortizationofUnrealizedLossesonSecuritiesTransferredtoHeldtoMaturityNetofTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="rf_Amortizationofunrealizedlossesonsecuritiestransferredtoheldtomaturitytax" name="Amortizationofunrealizedlossesonsecuritiestransferredtoheldtomaturitytax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="rf_AmountsRelatedtoInterestSettlementsonDerivatives" name="AmountsRelatedtoInterestSettlementsonDerivatives" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="rf_AssetsAssociatedWithStandbyLettersOfCredit" name="AssetsAssociatedWithStandbyLettersOfCredit" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_Availableforsalesecuritiesnetcarryingvalue" name="Availableforsalesecuritiesnetcarryingvalue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_BankownedlifeinsuranceMember" name="BankownedlifeinsuranceMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_BorrowedfundsAbstract" name="BorrowedfundsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CECLMember" name="CECLMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CapitalMarketsMember" name="CapitalMarketsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_CashFlowHedgeGainLossReclassifiedIntoOciAfterTax" name="CashFlowHedgeGainLossReclassifiedIntoOciAfterTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="rf_CashFlowHedgePreTaxIncomeLoss" name="CashFlowHedgePreTaxIncomeLoss" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialAgencyMember" name="CommercialAgencyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialAndIndustrialMember" name="CommercialAndIndustrialMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialInvestorRealEstateConstructionMember" name="CommercialInvestorRealEstateConstructionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_CommercialLettersOfCreditCommitment" name="CommercialLettersOfCreditCommitment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_CommercialNonAgencyMember" name="CommercialNonAgencyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialRealEstateConstructionOwnerOccupiedMember" name="CommercialRealEstateConstructionOwnerOccupiedMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialRealEstateMortgageOwnerOccupiedMember" name="CommercialRealEstateMortgageOwnerOccupiedMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CommercialinvestorrealestatemortgageMember" name="CommercialinvestorrealestatemortgageMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_ConsumerBankMember" name="ConsumerBankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CorporateBankMember" name="CorporateBankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_CorporateandotherdebtsecuritiesMember" name="CorporateandotherdebtsecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_DUSPortfolioMember" name="DUSPortfolioMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_DepositarySharesMember" name="DepositarySharesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_DerivativeAssetFairValueofDerivativeContractsOffsetinAccordancewithEntitysPolicythatwereOffsetUnderMasterNettingAgreements" name="DerivativeAssetFairValueofDerivativeContractsOffsetinAccordancewithEntitysPolicythatwereOffsetUnderMasterNettingAgreements" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_DerivativeLiabilityFairValueofDerivativeContractsOffsetInAccordancewithPolicyElectionthatwereOffsetUnderMasterNettingAgreements" name="DerivativeLiabilityFairValueofDerivativeContractsOffsetInAccordancewithPolicyElectionthatwereOffsetUnderMasterNettingAgreements" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_DerivativeNotionalAmount1" name="DerivativeNotionalAmount1" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_DisclosureEarningsLossPerCommonShareComputationOfBasicAndDilutedEarningsLossPerCommonShareAbstract" name="DisclosureEarningsLossPerCommonShareComputationOfBasicAndDilutedEarningsLossPerCommonShareAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_DiscountedCashFlowMember" name="DiscountedCashFlowMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EarningLossPerCommonShareFromDiscontinuedOperationsAbstract" name="EarningLossPerCommonShareFromDiscontinuedOperationsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EarningsPerShareBasicandDilutedinpershareAbstract" name="EarningsPerShareBasicandDilutedinpershareAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EarningsPerShareFromContinuingOperationsAbstract" name="EarningsPerShareFromContinuingOperationsAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EarningsPerShareNumeratorAbstract" name="EarningsPerShareNumeratorAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EarningspersharedenominatorAbstract" name="EarningspersharedenominatorAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_EquityInvestmentsWithoutaReadilyDeterminableFairValueMember" name="EquityInvestmentsWithoutaReadilyDeterminableFairValueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_EstimatedFairValueoftheFannieMaeDUSLossShareGuarantee" name="EstimatedFairValueoftheFannieMaeDUSLossShareGuarantee" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_ExcessofRedemptionAmountOverCarryingAmount" name="ExcessofRedemptionAmountOverCarryingAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_FairValueDiscountOnLoanPortfolioAmount" name="FairValueDiscountOnLoanPortfolioAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_FairValueDiscountOnLoanPortfolioRate" name="FairValueDiscountOnLoanPortfolioRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element id="rf_FairValueForeclosedPropertyAndOtherRealEstateAndEquipmentNonrecurringBasis" name="FairValueForeclosedPropertyAndOtherRealEstateAndEquipmentNonrecurringBasis" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_FairValueOptionMortgagesHeldForSaleAggregateUnpaidPrincipal" name="FairValueOptionMortgagesHeldForSaleAggregateUnpaidPrincipal" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_FannieMaeDUSServicingPortfolioAmount" name="FannieMaeDUSServicingPortfolioAmount" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_FederalAgencySecuritiesMember" name="FederalAgencySecuritiesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_FederalHomeLoanBankMember" name="FederalHomeLoanBankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_FederalReserveBankMember" name="FederalReserveBankMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_FinancingPeriodForConsumerLoanPortfolioSegment" name="FinancingPeriodForConsumerLoanPortfolioSegment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:durationItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_FinancingReceivableRecordedInvestmentTotalLoansAccrual" name="FinancingReceivableRecordedInvestmentTotalLoansAccrual" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_ForeclosedPropertyAndOtherRealEstateMember" name="ForeclosedPropertyAndOtherRealEstateMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_ForwardRateCommitmentsandFuturesContractsMember" name="ForwardRateCommitmentsandFuturesContractsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_ForwardSaleCommitmentsMember" name="ForwardSaleCommitmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_GainonsaleofbusinessMember" name="GainonsaleofbusinessMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_HedgingInstrumentAxis" name="HedgingInstrumentAxis" nillable="true" substitutionGroup="xbrldt:dimensionItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_HedgingInstrumentDomain" name="HedgingInstrumentDomain" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_HeldToMaturityAmortizedCostBasis" name="HeldToMaturityAmortizedCostBasis" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_HeldToMaturitySecuritiesGrossUnrealizedGainsRecognizedinOtherComprehensiveIncome" name="HeldToMaturitySecuritiesGrossUnrealizedGainsRecognizedinOtherComprehensiveIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_HeldToMaturitySecuritiesGrossUnrealizedLossesRecognizedinOtherComprehensiveIncome" name="HeldToMaturitySecuritiesGrossUnrealizedLossesRecognizedinOtherComprehensiveIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_ImpairedFinancingReceivableChargeoffsAndPaymentsApplied" name="ImpairedFinancingReceivableChargeoffsAndPaymentsApplied" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_ImpairedFinancingReceivableCoveragePercentage" name="ImpairedFinancingReceivableCoveragePercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_IndirectotherconsumerMember" name="IndirectotherconsumerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_IndirectvehiclesMember" name="IndirectvehiclesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_IndirectvehiclesandotherconsumerMember" name="IndirectvehiclesandotherconsumerMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_InsurancecommissionsandfeesMember" name="InsurancecommissionsandfeesMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_InterestRateFuturesAndForwardCommitmentsMember" name="InterestRateFuturesAndForwardCommitmentsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_InterestRateOptionsMember" name="InterestRateOptionsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_LeasesCarryingAmountExcluded" name="LeasesCarryingAmountExcluded" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorOperatingLeaseNetInvestment" name="LessorOperatingLeaseNetInvestment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorOperatingLeaseUnearnedIncome" name="LessorOperatingLeaseUnearnedIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceived" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceived" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedFiveYears" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedFiveYears" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedFourYears" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedFourYears" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedRemainderofFiscalYear" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedRemainderofFiscalYear" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedThereafter" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedThereafter" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedThreeYears" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedThreeYears" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedTwoYears" name="LessorSalestypeDirectFinancingandOperatingLeasesPaymentstobeReceivedTwoYears" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LeveragedLeasesNetInvestmentinLeveragedLeasesDisclosureGuaranteedResidualValueofLeasedAssets" name="LeveragedLeasesNetInvestmentinLeveragedLeasesDisclosureGuaranteedResidualValueofLeasedAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LeveragedLeasesNetInvestmentinLeveragedLeasesDisclosureUnguaranteedResidualValueofLeasedAssets" name="LeveragedLeasesNetInvestmentinLeveragedLeasesDisclosureUnguaranteedResidualValueofLeasedAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_LiabilitiesAssociatedWithStandbyLettersOfCredit" name="LiabilitiesAssociatedWithStandbyLettersOfCredit" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_LoansHeldForSaleMember" name="LoansHeldForSaleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_LoansIncludingFeesinInterestIncomeMember" name="LoansIncludingFeesinInterestIncomeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_LoansandLeasesReceivableAllowanceIncludingLoansImpairedAbstract" name="LoansandLeasesReceivableAllowanceIncludingLoansImpairedAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_LongtermBorrowingsInInterestExpenseMember" name="LongtermBorrowingsInInterestExpenseMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_MarketableEquitySecuritiescarriedatfairvalue" name="MarketableEquitySecuritiescarriedatfairvalue" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_MarketvalueadjustmentsonemployeebenefitassetsdefinedbenefitMember" name="MarketvalueadjustmentsonemployeebenefitassetsdefinedbenefitMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_MarketvalueadjustmentsonemployeebenefitassetsotherMemberMember" name="MarketvalueadjustmentsonemployeebenefitassetsotherMemberMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_MaximumQuantifiableFannieMaeDUSLossShareGuarantee" name="MaximumQuantifiableFannieMaeDUSLossShareGuarantee" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_MortgageIncomeMember" name="MortgageIncomeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_MortgageServicingRightsMember" name="MortgageServicingRightsMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_MortgageloansheldforsaleMember" name="MortgageloansheldforsaleMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_NetIncomeExpenseRecognizedonCashFlowHedges" name="NetIncomeExpenseRecognizedonCashFlowHedges" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="rf_NetchangeinunrealizedlossesonsecuritiestransferredtoheldtomaturityNetofTax" name="NetchangeinunrealizedlossesonsecuritiestransferredtoheldtomaturityNetofTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_NonAccrualMember" name="NonAccrualMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OperatingAbstract" name="OperatingAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_OperatingLeaseGuaranteedResidualValueofLeasedAsset" name="OperatingLeaseGuaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_OperatingLeaseUnguaranteedResidualValueofLeasedAsset" name="OperatingLeaseUnguaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_OptionAdjustedSpread" name="OptionAdjustedSpread" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_OptionAdjustedSpreadBasisPoints" name="OptionAdjustedSpreadBasisPoints" nillable="true" substitutionGroup="xbrli:item" type="xbrli:decimalItemType" xbrli:periodType="instant" />
+  <xsd:element id="rf_OtherComprehensiveIncomeLossTransfersfromAvailableforSaletoHeldtoMaturityNetofTax" name="OtherComprehensiveIncomeLossTransfersfromAvailableforSaletoHeldtoMaturityNetofTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="duration" />
+  <xsd:element id="rf_OtherComprehensiveIncomeLossTransfersfromAvailableforSaletoHeldtoMaturityTax" name="OtherComprehensiveIncomeLossTransfersfromAvailableforSaletoHeldtoMaturityTax" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OtherConsumerFinancingReceivableMember" name="OtherConsumerFinancingReceivableMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OtherNonInterestIncomeMember" name="OtherNonInterestIncomeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OtherRevenueNotImpactedMember" name="OtherRevenueNotImpactedMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OtherSegmentRevenueMember" name="OtherSegmentRevenueMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_OthermiscellaneousincomeMember" name="OthermiscellaneousincomeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_Plus3MonthLIBORMember" name="Plus3MonthLIBORMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_PreferredDividendsReductiontoRetainedEarningsatRedemption" name="PreferredDividendsReductiontoRetainedEarningsatRedemption" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_PreferredStockDividendRateBasisSpreadonVariableRatePercentage" name="PreferredStockDividendRateBasisSpreadonVariableRatePercentage" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_PreferredStockIssuanceCostsReductiontoNetIncome" name="PreferredStockIssuanceCostsReductiontoNetIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_ProvisionForUnfundedCreditCommitments" name="ProvisionForUnfundedCreditCommitments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="rf_ReDefaultedCommercialAndInvestorRealEstateLoansModifiedInTdrDuringPeriodAndOnNonAccrualStatus" name="ReDefaultedCommercialAndInvestorRealEstateLoansModifiedInTdrDuringPeriodAndOnNonAccrualStatus" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element id="rf_ReserveForUnfundedCreditCommitments" name="ReserveForUnfundedCreditCommitments" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_ReserveForUnfundedCreditCommitmentsRollForward" name="ReserveForUnfundedCreditCommitmentsRollForward" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_ResidentialAgencyMember" name="ResidentialAgencyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_ResidentialFirstMortgageMember" name="ResidentialFirstMortgageMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_ResidentialMortgageServicingRightsWeightedAverageCouponInterestRate" name="ResidentialMortgageServicingRightsWeightedAverageCouponInterestRate" nillable="true" substitutionGroup="xbrli:item" type="num:percentItemType" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_ResidentialNonAgencyMember" name="ResidentialNonAgencyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SalesTypeandDirectFinancingAbstract" name="SalesTypeandDirectFinancingAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesGuaranteedResidualValueofLeasedAsset" name="SalestypeDirectFinancingOperatingandLeveragedLeasesGuaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesLeaseReceivable" name="SalestypeDirectFinancingOperatingandLeveragedLeasesLeaseReceivable" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesNetInvestment" name="SalestypeDirectFinancingOperatingandLeveragedLeasesNetInvestment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesNetInvestmentAbstract" name="SalestypeDirectFinancingOperatingandLeveragedLeasesNetInvestmentAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesUnearnedIncome" name="SalestypeDirectFinancingOperatingandLeveragedLeasesUnearnedIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_SalestypeDirectFinancingOperatingandLeveragedLeasesUnguaranteedResidualValueofLeasedAsset" name="SalestypeDirectFinancingOperatingandLeveragedLeasesUnguaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_SalestypeandDirectFinancingLeaseGuaranteedResidualValueofLeasedAsset" name="SalestypeandDirectFinancingLeaseGuaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element id="rf_SalestypeandDirectFinancingLeaseUnguaranteedResidualValueofLeasedAsset" name="SalestypeandDirectFinancingLeaseUnguaranteedResidualValueofLeasedAsset" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_SalestypeandDirectFinancingLeasesAbstract" name="SalestypeandDirectFinancingLeasesAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_SalestypeandDirectFinancingUnearnedIncome" name="SalestypeandDirectFinancingUnearnedIncome" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element id="rf_ScheduleOfAmortizedCostAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityTextblockTableTextBlock" name="ScheduleOfAmortizedCostAndEstimatedFairValueOfSecuritiesAvailableForSaleAndSecuritiesHeldToMaturityTextblockTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_ScheduleOfInvestmentsInContinuousLossPositionTableTextBlock" name="ScheduleOfInvestmentsInContinuousLossPositionTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_ScheduleofFairValueHedgingBasisAdjustmentsTableTextBlock" name="ScheduleofFairValueHedgingBasisAdjustmentsTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_ScheduleofGrossGainsAndLossesOnSalesofSecuritiesAvailableForSaleTableTextBlock" name="ScheduleofGrossGainsAndLossesOnSalesofSecuritiesAvailableForSaleTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SecuritiesgainslossesnetMember" name="SecuritiesgainslossesnetMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_SegmentReportingAverageAssets" name="SegmentReportingAverageAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SeriesBPreferredStockDividendScenario1Member" name="SeriesBPreferredStockDividendScenario1Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SeriesBPreferredStockDividendScenario2Member" name="SeriesBPreferredStockDividendScenario2Member" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SeriesCPreferredStockDividendScenario1MemberMember" name="SeriesCPreferredStockDividendScenario1MemberMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_SeriesCPreferredStockDividendScenario2MemberMember" name="SeriesCPreferredStockDividendScenario2MemberMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_ServicingrelatedfeeTableTextBlock" name="ServicingrelatedfeeTableTextBlock" nillable="true" substitutionGroup="xbrli:item" type="nonnum:textBlockItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_StandbyLettersOfCreditCommitment" name="StandbyLettersOfCreditCommitment" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="credit" xbrli:periodType="instant" />
+  <xsd:element abstract="true" id="rf_StockholdersEquityAndComprehensiveIncomeLossLineItems" name="StockholdersEquityAndComprehensiveIncomeLossLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_StockholdersEquityAndComprehensiveIncomeLossTable" name="StockholdersEquityAndComprehensiveIncomeLossTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_TaxableDebtSecuritiesinInterestIncomeMember" name="TaxableDebtSecuritiesinInterestIncomeMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_TotalCommercialInvestorRealEstateConstructionMember" name="TotalCommercialInvestorRealEstateConstructionMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_TotalCommercialInvestorRealEstateMortgageMember" name="TotalCommercialInvestorRealEstateMortgageMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_TotalCompanyMember" name="TotalCompanyMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_TotalInterestExpenseandDepreciationExpenseOnOperatingLeaseAssets" name="TotalInterestExpenseandDepreciationExpenseOnOperatingLeaseAssets" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_TotalInvestorRealEstateMember" name="TotalInvestorRealEstateMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_TotalLoansNewTDRs" name="TotalLoansNewTDRs" nillable="true" substitutionGroup="xbrli:item" type="xbrli:monetaryItemType" xbrli:balance="debit" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_UnrealizedLossAndFairValueAvailableForSaleSecuritiesLineItems" name="UnrealizedLossAndFairValueAvailableForSaleSecuritiesLineItems" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_UnrealizedLossAndFairValueAvailableForSaleSecuritiesTable" name="UnrealizedLossAndFairValueAvailableForSaleSecuritiesTable" nillable="true" substitutionGroup="xbrldt:hypercubeItem" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_UnrealizedlossesonsecuritiestransferredtoheldtomaturityAbstract" name="UnrealizedlossesonsecuritiestransferredtoheldtomaturityAbstract" nillable="true" substitutionGroup="xbrli:item" type="xbrli:stringItemType" xbrli:periodType="duration" />
+  <xsd:element abstract="true" id="rf_WealthManagementMember" name="WealthManagementMember" nillable="true" substitutionGroup="xbrli:item" type="nonnum:domainItemType" xbrli:periodType="duration" />
+  <xsd:element id="rf_WeightedAverageServicingFeeBasisPoints" name="WeightedAverageServicingFeeBasisPoints" nillable="true" substitutionGroup="xbrli:item" type="xbrli:decimalItemType" xbrli:periodType="instant" />
+</xsd:schema>
