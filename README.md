@@ -3,5 +3,8 @@ In this project, I will be taking publicly available banking data and developing
 
 ## Steps
 1) Set up git
-2) Set up python environment in anaconda including any modules I might use like https://github.com/greedo/python-xbrl for xblr parsing
+2) Set up python environment in anaconda using standard packages like numpy and pandas and also install any non-typical packagaes I might use like\
+https://github.com/greedo/python-xbrl for xblr parsing\
+PyPDF2 for taking in PDF files\
+tabula-py for taking in table data
 3) Download a selection of data and set up directory structure
