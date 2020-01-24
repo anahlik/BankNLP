@@ -9,4 +9,4 @@ pdftotext for taking in PDF files[^1]\
 tabula-py for taking in table data
 3) Download a selection of data and set up directory structure
 
-[^1]: I tried PyPDF2 but it was inserting odd newline characters and I tried tika but it relied too much on outside servers before I decided on pdftotext (which took a little extra work installing but seems much better overall)
+[^1]: I tried PyPDF2 but it was inserting odd newline characters, and I tried tika but it relied too much on outside servers before I decided on pdftotext (which took a little extra work installing but seems much better overall)
