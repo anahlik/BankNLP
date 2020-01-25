@@ -70,18 +70,19 @@ def text_read(fileLoc: str) -> str:
     return cleanedText
 
 
-# This is a way to specify where the data is held
-homedir = '../data/'
-# addondir = 'quarterly/'
-addondir = 'other/'
-# type = 'earningsTran/'
-# type = 'earningsPR/'
-type = 'transcript/'
-# specificfile = '2Q19.pdf'
-specificfile = 'regions_RF 2019 BAAB Transcript.pdf'
+def main():
+    # This is a way to specify where the data is held
+    homedir = '../data/'
+    # addondir = 'quarterly/'
+    addondir = 'other/'
+    # type = 'earningsTran/'
+    # type = 'earningsPR/'
+    type = 'transcript/'
+    # specificfile = '2Q19.pdf'
+    specificfile = 'regions_RF 2019 BAAB Transcript.pdf'
 
-fileLoc = homedir + addondir + type + specificfile
+    fileLoc = homedir + addondir + type + specificfile
 
 
-
-pass
+if __name__ == '__main__':
+    main()

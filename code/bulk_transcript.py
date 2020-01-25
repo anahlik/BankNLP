@@ -3,6 +3,7 @@ import parsing
 import pandas as pd
 import glob
 
+# glob gets all of the files in a directory. We build up a list of all files that we will loop through and add
 allfiles = list()
 allfiles.append([glob.glob('../data/quarterly/earningsTran/regions_*.pdf'), 'regions', 'qr'])
 allfiles.append([glob.glob('../data/other/transcript/regions_*.pdf'), 'regions', 'other'])
@@ -20,5 +21,6 @@ for types in allfiles:
         df = pd.concat([df, df_temp])
     pass
 
+# Save to csv for later
 df.to_csv("../data/QandA.csv")
 pass
