@@ -12,20 +12,28 @@ def categorize(text: str):
             text[1] = text[1] + ' ' + temp
     elif len(text) == 1:
         return {'questiontype': 'error', 'reply': text[0], 'name': None, 'title': None, 'company': None}
-    m = re.match(r'^(?P<Name>[A-Z]\w*\s?[A-Z]?\.?\s[A-Z]\w*(,\sJr\.|Sr\.|IV|III|II|)?)\s(?P<Title>.*), (?P<Company>.*)',
+    m = re.match(r'^(?P<Name>([A-Z]\.\s)?([A-Z]\.\s)?[A-Z]\w*(\s[A-Z]\.)?\s[A-Z][A-Za-z\'\\]*(,\sJr\.|Sr\.|IV|III|II|)?)\s(?P<Title>.*), (?P<Company>.*)',
                  text[0])
-    name = m.group('Name')
-    title = m.group('Title')
-    company = m.group('Company')
-    if re.match(r'^\s*A\s?', text[1]):
-        qa = 'answer'
-        reply = re.sub(r'^\s*A\s?', '', text[1])
-    elif re.match(r'^\s*Q\s?', text[1]):
-        qa = 'question'
-        reply = re.sub(r'^\s*Q\s?', '', text[1])
+    if m:
+        name = m.group('Name')
+        title = m.group('Title')
+        company = m.group('Company')
+        if re.match(r'^\s*A\s?', text[1]):
+            qa = 'answer'
+            reply = re.sub(r'^\s*A\s?', '', text[1])
+        elif re.match(r'^\s*Q\s?', text[1]):
+            qa = 'question'
+            reply = re.sub(r'^\s*Q\s?', '', text[1])
+        else:
+            qa = 'unknown'
+            reply = text[1]
     else:
         qa = 'unknown'
-        reply = text[1]
+        reply = ' '.join(text)
+        name = None
+        title = None
+        company = None
+
     return {'questiontype': qa, 'reply': reply, 'name': name, 'title': title, 'company': company}
 
 

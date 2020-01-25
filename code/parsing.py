@@ -78,11 +78,10 @@ addondir = 'other/'
 # type = 'earningsPR/'
 type = 'transcript/'
 # specificfile = '2Q19.pdf'
-specificfile = 'RF 2019 BAAB Transcript.pdf'
+specificfile = 'regions_RF 2019 BAAB Transcript.pdf'
 
 fileLoc = homedir + addondir + type + specificfile
-andrew = text_read(fileLoc)
 
-import qa
-andrew2 = qa.extractQA(combine(andrew))
+
+
 pass
