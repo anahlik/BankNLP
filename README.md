@@ -8,5 +8,6 @@ https://github.com/greedo/python-xbrl for xblr parsing\
 pdftotext for taking in PDF files[^1]\
 tabula-py for taking in table data
 3) Download a selection of data and set up directory structure
+4) Started coding in different files and then unifying some of the files using functions (putting original files in an folder labeled old). Make sure to comment what each function performs and do comments along the way
 
 [^1]: I tried PyPDF2 but it was inserting odd newline characters, and I tried tika but it relied too much on outside servers before I decided on pdftotext (which took a little extra work installing but seems much better overall)

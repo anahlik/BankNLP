@@ -48,12 +48,13 @@ def clean(text: list, extras: list = 0) -> list:
 
 
 # This can combine pages if needed
-def make_corpus(text):
-    pass
+def combine(text: list) -> str:
+    separator = ' '
+    return separator.join(text)
 
 
-# This reads in a table using tabula read
-def table_read(fileLoc: str) -> str:
+# This reads in a table using tabula read and returns a list of DataFrames that have the tables included
+def table_read(fileLoc: str) -> list:
     dfs = tabula.read_pdf(fileLoc, pages="all")
     return dfs
 
@@ -71,11 +72,17 @@ def text_read(fileLoc: str) -> str:
 
 # This is a way to specify where the data is held
 homedir = '../data/'
-addondir = 'quarterly/'
-type = 'earningsTran/'
+# addondir = 'quarterly/'
+addondir = 'other/'
+# type = 'earningsTran/'
 # type = 'earningsPR/'
-specificfile = '1Q19.pdf'
+type = 'transcript/'
+# specificfile = '2Q19.pdf'
+specificfile = 'RF 2019 BAAB Transcript.pdf'
 
 fileLoc = homedir + addondir + type + specificfile
 andrew = text_read(fileLoc)
+
+import qa
+andrew2 = qa.extractQA(combine(andrew))
 pass
