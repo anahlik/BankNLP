@@ -2,12 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pytablewriter import MarkdownTableWriter
 
-def barchart(df, xlab, savename):
+def barchart(df, xlab, savename, rotate=50):
     plt.figure(figsize=(15, 10))
     df.size().sort_values(ascending=False).plot.bar()
-    plt.xticks(rotation=50)
+    plt.xticks(rotation=rotate)
     plt.xlabel(xlab)
     # plt.ylabel("Number of Values")
+    plt.tight_layout()
     plt.savefig('../data/images/' + savename + '.png')
 
 
@@ -24,9 +25,9 @@ def main():
     writer.write_table()
 
     barchart(group_type, 'Response Type', 'responses')
-    barchart(questions.groupby('name'), 'Who Asked Questions', 'question_names')
-    barchart(questions.groupby('company'), 'Which Companies Asked Questions', 'question_companies')
-    barchart(questions.groupby('name'), 'Who Gave Answers', 'answer_names')
+    barchart(questions.groupby('name'), 'Who Asked Questions', 'question_names', rotate=90)
+    barchart(questions.groupby('company'), 'Which Companies Asked Questions', 'question_companies', rotate=90)
+    barchart(answers.groupby('name'), 'Who Gave Answers', 'answer_names')
 
 if __name__ == "__main__":
     main()
