@@ -14,3 +14,8 @@ Use beautifulsoup to automate pulling documents from Bank websites and putting t
 
 ## Data Sources
 Seems like there are some other places to get transcripts of calls that may be "cleaner" especially because it seems some banks do not provide the transcripts themselves like Regions does (BOA for example). Are they all free? Can they be scraped effectively and is that allowed?
+
+## Bert
+Could possible use pretrained models and update using banking language. Bert seems relatively promising but the computational requriements might be relatively high. https://github.com/google-research/bert
+
+Word to vec might also be useful but it is older https://code.google.com/archive/p/word2vec/
