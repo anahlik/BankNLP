@@ -16,16 +16,18 @@ tabula-py for taking in table data
 ## Some Results
 I took transcripts from January 1 2018 to January 20th 2020 and tried to pull relevant information. The parsing I did unfortunately is relatively specific to how regions formatted its pdf. However, the broad intuition would be the same to read in other transcripts. I developed a dataframe of results that included the person who game the response, their title, their company, the type of response, the response itself, the type of document, the bank in question, and the filename of the file it was pulled from. This should ensure that if when running the script, there were systematic errors showing up you could see which files were giving the errors. A csv of the dataframe is given in [QandA.csv](./data/QandA.csv)
 
-|questiontype|  reply   |       name        | title |        company        | bank  |doctype|                            filename                             |
-|------------|----------|-------------------|-------|-----------------------|-------|-------|-----------------------------------------------------------------|
-|1305        |1305      |1146               |1146   |1146                   |1305   |1305   |1305                                                             |
-|           4|      1161|                 49|     35|                     32|      1|      2|                                                               19|
-|answer      |Thank you.|John M. Turner, Jr.|Analyst|Regions Financial Corp.|regions|qr     |../data/other/transcript\regions_Investor-Day-2019-Transcript.pdf|
-|675         |21        |258                |434    |666                    |1305   |744    |129                                                              |
+The following is a table of the descriptive statistics of te entire dataframe
 
-The following are some figures to quickly visualize the data by what typse of questions are in the dataset, who is answering the questions, who is asking the questions, and what companies are asking questions.
+|      |questiontype|  reply   |       name        | title |        company        | bank  |doctype|                            filename                             |
+|------|------------|----------|-------------------|-------|-----------------------|-------|-------|-----------------------------------------------------------------|
+|count |1305        |1305      |1146               |1146   |1146                   |1305   |1305   |1305                                                             |
+|unique|           4|      1161|                 49|     35|                     32|      1|      2|                                                               19|
+|top   |answer      |Thank you.|John M. Turner, Jr.|Analyst|Regions Financial Corp.|regions|qr     |../data/other/transcript\regions_Investor-Day-2019-Transcript.pdf|
+|freq  |675         |21        |258                |434    |666                    |1305   |744    |129                                                              |
+
+Next are some figures to quickly visualize the data by what types of questions are in the dataset, who is answering the questions, who is asking the questions, and what companies are asking questions.
 
 ![Types](./data/images/responses.png)
-![Answers](./data/images/answernames.png)
-![QuestionNames](./data/images/questionnames.png)
-![QuestionNames](./data/images/questioncompanies.png)
+![Answers](./data/images/answer_names.png)
+![QuestionNames](./data/images/question_names.png)
+![QuestionNames](./data/images/question_companies.png)
