@@ -16,7 +16,9 @@ tabula-py for taking in table data
 ## Some Results
 I took transcripts from January 1 2018 to January 20th 2020 and tried to pull relevant information. The parsing I did unfortunately is relatively specific to how regions formatted its pdf. However, the broad intuition would be the same to read in other transcripts. I developed a dataframe of results that included the person who game the response, their title, their company, the type of response, the response itself, the type of document, the bank in question, and the filename of the file it was pulled from. This should ensure that if when running the script, there were systematic errors showing up you could see which files were giving the errors. A csv of the dataframe is given in [QandA.csv](./data/QandA.csv)
 
-The following is a table of the descriptive statistics of te entire dataframe
+
+#### Tables
+The following provides descriptive statistics for the entire dataframe
 
 |      |questiontype|  reply   |       name        | title |        company        | bank  |doctype|                            filename                             |
 |------|------------|----------|-------------------|-------|-----------------------|-------|-------|-----------------------------------------------------------------|
@@ -25,9 +27,16 @@ The following is a table of the descriptive statistics of te entire dataframe
 |top   |answer      |Thank you.|John M. Turner, Jr.|Analyst|Regions Financial Corp.|regions|qr     |../data/other/transcript\regions_Investor-Day-2019-Transcript.pdf|
 |freq  |675         |21        |258                |434    |666                    |1305   |744    |129                                                              |
 
-Next are some figures to quickly visualize the data by what types of questions are in the dataset, who is answering the questions, who is asking the questions, and what companies are asking questions.
+Note that this shows us there are some replies that aren't very helpful like "Thank you" and some are not as helpful due to the lack of variation in the current dataset like the bank column.
+
+#### Figures
+These figures quickly visualize the data by what types of questions are in the dataset, who is answering the questions, who is asking the questions, and what companies are asking questions.
 
 ![Types](./data/images/responses.png)
 ![Answers](./data/images/answer_names.png)
 ![QuestionNames](./data/images/question_names.png)
 ![QuestionNames](./data/images/question_companies.png)
+
+Note this quickly shows us things like relative frequency of names and companies that show up. It also shows that some names are probably the same person but the transcript has coded them differently. For example, Matthew O'Conner shows up 3 different ways. It is important to decide if this matters.
+
+Without getting good data to start we will have bad conclusions at the end. Garbage in Garbage out.
