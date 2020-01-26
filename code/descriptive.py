@@ -18,10 +18,10 @@ def main():
     # Split the data in various ways
     qa_df = pd.read_csv("../data/QandA.csv")
     df_description = qa_df.describe()
-    group_type = qa_df.groupby('questiontype')
+    group_type = qa_df.groupby('responsetype')
     group_type_description = group_type.describe()
-    answers = qa_df[qa_df.questiontype == 'answer']
-    questions = qa_df[qa_df.questiontype == 'question']
+    answers = qa_df[qa_df.responsetype == 'answer']
+    questions = qa_df[qa_df.responsetype == 'question']
 
     # Make a table for putting in the github markdown
     writer = MarkdownTableWriter()

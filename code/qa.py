@@ -16,24 +16,24 @@ def categorize(text: str):
             text[1] = text[1] + ' ' + temp
     # If it sees something weird it reports what it found but gives question type as an error
     elif len(text) == 1:
-        return {'questiontype': 'error', 'reply': text[0], 'name': None, 'title': None, 'company': None}
+        return {'responsetype': 'error', 'response': text[0], 'name': None, 'title': None, 'company': None}
 
     # This is somewhat complicated but it first finds the question type then tries to find the name, then the title,
     # then the company. Probably specific to what regions looks like unfortunately but can be adapted
     if re.match(r'^\s*A\s?', text[1]):
         qa = 'answer'
-        reply = re.sub(r'^\s*A\s?', '', text[1])
+        response = re.sub(r'^\s*A\s?', '', text[1])
         m = re.match(r'^(?P<Name>([A-Z]\.\s)?([A-Z]\.\s)?[A-Z]\w*(\s[A-Z]\.)?\s[A-Z][A-Za-z\'\\]*(,\sJr\.|Sr\.|IV|III|II|)?)\s(?P<Title>.*), (?P<Company>.*)',
                  text[0])
     elif re.match(r'^\s*Q\s?', text[1]):
         qa = 'question'
-        reply = re.sub(r'^\s*Q\s?', '', text[1])
+        response = re.sub(r'^\s*Q\s?', '', text[1])
         m = re.match(
             r'^(?P<Name>([A-Z]\.\s)?([A-Z]\.\s)?[A-Z]\w*(\s[A-Z]\.)?(\s[A-Z]\w*)?\s[A-Z][A-Za-z\'\\]*(,\sJr\.|Sr\.|IV|III|II|)?)\s(?P<Title>(Analyst|Portfolio Manager)), (?P<Company>.*)',
             text[0])
     else:
         qa = 'unknown'
-        reply = text[1]
+        response = text[1]
         m = False
 
     # if there is a match then write the matches in the appropriate spot
@@ -43,13 +43,13 @@ def categorize(text: str):
         company = m.group('Company')
     # if no match label it as an error
     else:
-        reply = ' '.join(text)
+        response = ' '.join(text)
         name = 'error'
         title = 'error'
         company = 'error'
 
     # return the dictionary that will form the dataframe later
-    return {'questiontype': qa, 'reply': reply, 'name': name, 'title': title, 'company': company}
+    return {'responsetype': qa, 'response': response, 'name': name, 'title': title, 'company': company}
 
 
 def extractQA(text: str) -> pd.DataFrame:
