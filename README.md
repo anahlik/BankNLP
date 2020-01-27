@@ -12,6 +12,7 @@ nltk and gensim for Word2Vec modeling
 3) Download a selection of data and set up directory structure
 4) Started coding data ingestion starting with different .py files and then unifying some of the files into a helper .py file using variouis functions (putting the original files in an folder labeled old). Make sure to do effective commenting of what each function performs and other comments along the way where there could be confusion.
 5) Set up automated bulk ingestion of the pdfs and automated descriptive statistics to take a first look at the data and see any glaring errors.
+6) Used gensim and nltk to create a word2vec model and visualize using an embedding projector through tensorflow
 
 [1]: I tried PyPDF2 but it was inserting odd newline characters, and I tried tika but it relied too much on outside servers before I decided on pdftotext (which took a little extra work installing but seems much better overall)
 
@@ -47,3 +48,11 @@ These figures quickly visualize the data by what types of questions are in the d
 Note this quickly shows us things like relative frequency of names and companies that show up. It also shows that some names are probably the same person but the transcript has coded them differently. For example, Matthew O'Conner shows up 3 different ways. It is important to decide if this matters. We also see the companies graph is very similar to the names graph suggesting that generally there is only one analyst asking questions for each company and perhaps companies is a better way to slice the data.
 
 In general, without getting good data to start we will have bad conclusions at the end. Garbage in Garbage out. Ingesting the data aka [data munging](https://en.wikipedia.org/wiki/Data_wrangling) into a consistent format will allow the downstream analysis to proceed seamlessly if done well.
+
+## NLP using Word2Vec
+Next, I wanted to start with unsupervised learning of responses using the google Word2Vec algorithm (implemented in gensim). Essentially, this algorithm tries to embed a word in a vector space (where the size of the vector is a hyperparamter to be chosen) such that it is close to words that are similar to it 
+
+Each model can be visualized using the tensorflow projector
+1) [CBOW](http://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/CBOWvisual.json)
+
+2) [SkipGram](http://projector.tensorflow.org/?config=https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/SGRAMvisual.json)
