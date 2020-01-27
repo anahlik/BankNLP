@@ -1,0 +1,16 @@
+name: BankNLP
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - scikit-learn
+  - numpy
+  - pandas
+  - matplotlib
+  - gensim
+  - requests
+  - pip
+  - pip:
+    - delayed-assert
+    - pytablewriter
+    - pdftotext
