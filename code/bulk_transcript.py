@@ -22,5 +22,5 @@ for types in allfiles:
     pass
 
 # Save to csv for later
-df.to_csv("../data/QandA.csv", index=False)
+df.to_csv("../output/QandA.csv", index=False)
 pass

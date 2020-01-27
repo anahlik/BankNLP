@@ -7,9 +7,11 @@ In this project, I will be taking publicly available banking data, parsing it to
 https://github.com/greedo/python-xbrl for xblr parsing\
 pdftotext for taking in PDF files<sup>1</sup>\
 tabula-py for taking in table data\
-pytablewriter for writing markdown tables (for this document)
+pytablewriter for writing markdown tables (for this document)\
+nltk and gensim for Word2Vec modeling
 3) Download a selection of data and set up directory structure
-4) Started coding in different files and then unifying some of the files using functions (putting original files in an folder labeled old). Make sure to do effective commenting of what each function performs and other comments along the way where there could be confusion.
+4) Started coding data ingestion starting with different .py files and then unifying some of the files into a helper .py file using variouis functions (putting the original files in an folder labeled old). Make sure to do effective commenting of what each function performs and other comments along the way where there could be confusion.
+5) Set up automated bulk ingestion of the pdfs and automated descriptive statistics to take a first look at the data and see any glaring errors.
 
 [1]: I tried PyPDF2 but it was inserting odd newline characters, and I tried tika but it relied too much on outside servers before I decided on pdftotext (which took a little extra work installing but seems much better overall)
 
@@ -18,7 +20,7 @@ For my process, I focused first on reading in the pdf files and making sure I wa
 
 
 ## Some Results
-I took transcripts (and other published data) from Regions Bank over the period from January 1 2018 to January 20th 2020 and pulled relevant information using string and regex functions. The parsing I did unfortunately is relatively specific to how regions formatted its pdf. However, the broad intuition would be the same to read in other transcripts. I developed a dataframe of results that included the person who gave the response, their title, their company, the type of response, the response itself, the type of document, the bank in question, and the filename of the file it was pulled from. It also perserved data that was not ingested correctly and noted it. This ensures that if when running the script, there were systematic errors showing up you could see which files were giving the errors by matching it to the filename.<sup>2</sup> A csv of the dataframe is given in [QandA.csv](./data/QandA.csv)
+I took transcripts (and other published data) from Regions Bank over the period from January 1 2018 to January 20th 2020 and pulled relevant information using string and regex functions. The parsing I did unfortunately is relatively specific to how regions formatted its pdf. However, the broad intuition would be the same to read in other transcripts. I developed a dataframe of results that included the person who gave the response, their title, their company, the type of response, the response itself, the type of document, the bank in question, and the filename of the file it was pulled from. It also perserved data that was not ingested correctly and noted it. This ensures that if when running the script, there were systematic errors showing up you could see which files were giving the errors by matching it to the filename.<sup>2</sup> A csv of the dataframe is given in [QandA.csv](output/QandA.csv)
 
 [2] For example in this process it turns out some of the transcripts from specific events were encoded slightly differently and thus gave errors that could be corrected in a finalized product.
 
@@ -37,11 +39,11 @@ Note that this shows us there are some replies that aren't very helpful like "Th
 #### Figures
 These figures quickly visualize the data by what types of questions are in the dataset, who is answering the questions, who is asking the questions, and what companies are asking questions.
 
-![Types](./data/images/responses.png)
-![Answers](./data/images/answer_names.png)
-![QuestionNames](./data/images/question_names.png)
-![QuestionNames](./data/images/question_companies.png)
+![Types](output/images/responses.png)
+![Answers](output/images/answer_names.png)
+![QuestionNames](output/images/question_names.png)
+![QuestionNames](output/images/question_companies.png)
 
-Note this quickly shows us things like relative frequency of names and companies that show up. It also shows that some names are probably the same person but the transcript has coded them differently. For example, Matthew O'Conner shows up 3 different ways. It is important to decide if this matters.
+Note this quickly shows us things like relative frequency of names and companies that show up. It also shows that some names are probably the same person but the transcript has coded them differently. For example, Matthew O'Conner shows up 3 different ways. It is important to decide if this matters. We also see the companies graph is very similar to the names graph suggesting that generally there is only one analyst asking questions for each company and perhaps companies is a better way to slice the data.
 
-Without getting good data to start we will have bad conclusions at the end. Garbage in Garbage out.
+In general, without getting good data to start we will have bad conclusions at the end. Garbage in Garbage out. Ingesting the data aka [data munging](https://en.wikipedia.org/wiki/Data_wrangling) into a consistent format will allow the downstream analysis to proceed seamlessly if done well.

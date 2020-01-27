@@ -11,12 +11,12 @@ def barchart(df, xlab, savename, rotatation=50):
     plt.xlabel(xlab)
     # plt.ylabel("Number of Values")
     plt.tight_layout()
-    plt.savefig('../data/images/' + savename + '.png')
+    plt.savefig('../output/images/' + savename + '.png')
 
 
 def main():
     # Split the data in various ways
-    qa_df = pd.read_csv("../data/QandA.csv")
+    qa_df = pd.read_csv("../output/QandA.csv")
     df_description = qa_df.describe()
     group_type = qa_df.groupby('responsetype')
     group_type_description = group_type.describe()
