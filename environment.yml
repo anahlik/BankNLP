@@ -10,6 +10,7 @@ dependencies:
   - gensim
   - requests
   - lxml
+  - nltk
   - pip
   - pip:
     - pytablewriter

@@ -4,6 +4,10 @@ import nltk
 import re
 import gensim
 
+# Uncomment if you need to download resources for nltk
+# nltk.download('stopwords')
+# nltk.download('punkt')
+
 
 # This tokenizes the responses and takes out stopwords using the natural language toolkit.
 def tokenize(corpus: list) -> list:
@@ -23,7 +27,7 @@ def tokenize(corpus: list) -> list:
 
 # preprocess the text to only keep letters (will lose numerical info)
 def preprocess(x):
-    x = re.sub('[^a-z\s]', '', x.lower())
+    x = re.sub(r'[^a-z\s]', '', x.lower())
     return x
 
 
@@ -33,8 +37,8 @@ def main():
     goodvals = qa_df[(qa_df.responsetype == 'answer') | (qa_df.responsetype == 'question')]
     text = goodvals['response'].apply(preprocess)
     text2 = tokenize(text)
-    modelCBOW = gensim.models.Word2Vec(text2, min_count=5, size=15, window=5)
-    modelSGRAM = gensim.models.Word2Vec(text2, min_count=5, size=15, window=5, sg=1)
+    modelCBOW = gensim.models.Word2Vec(text2, min_count=5, size=10, window=5)
+    modelSGRAM = gensim.models.Word2Vec(text2, min_count=5, size=10, window=5, sg=1)
     modelCBOW.wv.save_word2vec_format('../output/model/CBOW.model')
     modelSGRAM.wv.save_word2vec_format('../output/model/SGRAM.model')
     # Use the following command (while in the correct directory to generate tensorflow vectors
