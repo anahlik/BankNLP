@@ -41,8 +41,13 @@ def main():
     modelSGRAM = gensim.models.Word2Vec(text2, min_count=5, size=10, window=5, sg=1)
     modelCBOW.wv.save_word2vec_format('../output/model/CBOW.model')
     modelSGRAM.wv.save_word2vec_format('../output/model/SGRAM.model')
-    # Use the following command (while in the correct directory to generate tensorflow vectors
+    # Use the following command (while in the correct directory) to generate tensorflow vectors
     # python -m gensim.scripts.word2vec2tensor -i CBOW.model -o BankCBOW
+    good_CBOW = modelCBOW.wv.similar_by_word('good', topn=10)
+    good_SGRAM = modelSGRAM.wv.similar_by_word('good', topn=10)
+    earnings_CBOW = modelCBOW.wv.similar_by_word('earnings', topn=10)
+    earnings_SGRAM = modelSGRAM.wv.similar_by_word('earnings', topn=10)
+    earnings_rolling_SGRAM = modelSGRAM.wv.similarity('earnings', 'rolling')
     pass
 
 
