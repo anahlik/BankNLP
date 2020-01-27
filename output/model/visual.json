@@ -1,0 +1,13 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Bank Tensor",
+      "tensorShape": [
+        1000,
+        50
+      ],
+      "tensorPath": "https://github.com/anahlik/BankNLP/tree/master/output/model/testvec_tensor.tsv",
+      "metadataPath": "https://github.com/anahlik/BankNLP/tree/master/output/model/testvec_metadata.tsv"
+    }
+  ]
+}
