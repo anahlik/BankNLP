@@ -6,8 +6,8 @@
         1000,
         50
       ],
-      "tensorPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/testvec_tensor.tsv",
-      "metadataPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/testvec_metadata.tsv"
+      "tensorPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/BankCBOW_tensor.tsv",
+      "metadataPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/BankCBOW_metadata.tsv"
     }
   ]
 }
