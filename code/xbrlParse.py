@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 homedir = '../data/'
 addondir = 'xbrl/'
-specificfile = 'rf-2019630x10xq_htm.xml'
+specificfile = 'regions_rf-2019630x10xq_htm.xml'
 
 fileLoc = homedir + addondir + specificfile
 

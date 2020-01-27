@@ -9,8 +9,10 @@ dependencies:
   - matplotlib
   - gensim
   - requests
+  - lxml
   - pip
   - pip:
-    - delayed-assert
     - pytablewriter
-    - pdftotext
+    - tabula
+    - bs4
+    - pdftotext # See following https://pypi.org/project/pdftotext/ Requires Microsoft Visual Studio Install
