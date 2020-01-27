@@ -1,0 +1,13 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Bank Tensor",
+      "tensorShape": [
+        1000,
+        50
+      ],
+      "tensorPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/BankSGRAM_tensor.tsv",
+      "metadataPath": "https://raw.githubusercontent.com/anahlik/BankNLP/master/output/model/BankSGRAM_metadata.tsv"
+    }
+  ]
+}
