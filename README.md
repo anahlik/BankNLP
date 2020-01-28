@@ -1,5 +1,5 @@
 # BankNLP
-In this project, I will be taking publicly available banking data, parsing it to get it into a useable format, showing some descriptive statistics, and finally developing a word embedding model. Publicly available data include quarterly presentations to investors and sec filings. Specifically, I will be focusing on publicly available Regions bank information over the past two years.
+In this project, I will be taking publicly available banking data, parsing it to get it into a useable format, showing some descriptive statistics, and finally developing a word embedding model. Publicly available data include quarterly presentations to investors and sec filings. Specifically, I will be focusing on publicly available Regions bank information over the past two years. This document walks through an edited version of my thought process. Please see [setup.md](setup.md) for specific setup instructions to run independently.
 
 ## Steps
 1) Set up git
