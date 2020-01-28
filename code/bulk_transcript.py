@@ -1,4 +1,4 @@
-import qa
+import question_answer
 import parsing
 import pandas as pd
 import glob
